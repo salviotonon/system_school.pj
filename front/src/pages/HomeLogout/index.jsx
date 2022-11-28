@@ -1,5 +1,9 @@
+import { Button } from '../../components/Button'
+
 export const HomeLogout = () => {
-    return (
-        <h1>HomeLogout</h1>
-    )
+  return (
+    <div className='flex justify-center items-center min-h-screen'>
+      <Button>Login</Button>
+    </div>
+  )
 }
