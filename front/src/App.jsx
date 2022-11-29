@@ -1,12 +1,13 @@
-import './global/styles.css'
+import { Button } from './components/Button';
+import './global/styles.css';
+import { HomeLogout } from './pages/HomeLogout';
+
 
 function App() {
 
 
   return (
-    <div className="App">
-      <h1 className='text-lg underline'>Hello World!</h1>
-    </div>
+    <HomeLogout />
   )
 }
 

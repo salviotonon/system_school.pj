@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  background-color: #e7e5e5;
+}
