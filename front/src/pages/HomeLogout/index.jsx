@@ -1,5 +1,11 @@
+import { Form } from '../../components/Form'
+
+
+
 export const HomeLogout = () => {
-    return (
-        <h1>HomeLogout</h1>
-    )
+  return (
+    <div className='flex flex-col justify-center items-center min-h-screen'>
+      <Form />
+    </div>
+  )
 }
