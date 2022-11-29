@@ -1,9 +1,11 @@
-import { Button } from '../../components/Button'
+import { Form } from '../../components/Form'
+
+
 
 export const HomeLogout = () => {
   return (
-    <div className='flex justify-center items-center min-h-screen'>
-      <Button>Login</Button>
+    <div className='flex flex-col justify-center items-center min-h-screen'>
+      <Form />
     </div>
   )
 }

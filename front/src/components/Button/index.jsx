@@ -1,8 +1,12 @@
 export const Button = ({ children, ...props }) => {
   return (
-    <button className='bg-violet-900 px-4 py-2 rounded-lg text-white hover:bg-violet-500  focus:outline-none active:border-violet-700 shadow-md shadow-violet-600 transition-opacity w-full
-    sm:w-48 mx-4 '>
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded
+    focus:outline-none focus:shadow-outline w-full"
+      type="button">
+
       {children}
+
     </button>
   )
 }
