@@ -31,8 +31,8 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className='bg-white shadow-md shadow-gray-400 rounded px-8 pt-6 pb-8 mb-4 max-w-md'>
-      <h2 className='text-lg font-bold my-5'>
+    <form onSubmit={onSubmit} className='bg-white shadow-md shadow-gray-400 rounded px-8 pt-6 pb-8 mb-4 w-full max-w-sm mx-2'>
+      <h2 className='text-3xl text-gray-700 font-bold my-5'>
         Faça o login para continuar
       </h2>
       <Input
