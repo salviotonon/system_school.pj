@@ -1,4 +1,3 @@
-import { Button } from '../../components/Button'
 import { Form } from '../../components/Form'
 import { FcMenu } from 'react-icons/fc'
 import { GrFormClose } from 'react-icons/gr'
@@ -16,7 +15,7 @@ export const Login = () => {
 
   return (
     <>
-      <header className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between'>
+      <header className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between sticky left-0 right-0 top-0 z-30'>
         <div className='mx-4 my-6 md:my-0 flex justify-between items-center'>
           <span className='text-2xl cursor-pointer'>
             Logo
@@ -34,17 +33,14 @@ export const Login = () => {
           <li className='text-black mx-4 my-6 md:my-0'><a href='#' className='text-x1 hover:text-cyan-500 duration-500'>CLASS</a></li>
           <button className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-75 text-white duration-500 px-6 py-2 hover:bg-cyan-500 rounded'>Get started</button>
         </ul>
-
       </header>
-      <main className='min-h-screen w-full mx-auto my-0 flex justify-center items-center'>
+      <main className='min-h-screen w-full mx-auto my-5 flex justify-center items-center '>
         <Form />
-
       </main>
       <footer className='bg-white shadow-xl h-24 flex items-center justify-center'>
         <span className='text-sm font-light'> Projeto Comunidade Pj &copy;</span>
 
       </footer>
     </>
-
   )
 }

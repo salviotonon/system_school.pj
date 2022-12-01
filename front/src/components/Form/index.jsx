@@ -31,28 +31,37 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className='bg-white shadow-md shadow-gray-400 rounded px-8 pt-6 pb-8 mb-4 w-full max-w-sm mx-2'>
-      <h2 className='text-3xl text-gray-700 font-bold my-5'>
-        Faça o login para continuar
-      </h2>
-      <Input
-        name='name'
-        values={values.name}
-        label='Login'
-        placeholder='Digite seu login'
-        onChange={handleChange}
-        error={showError ? errors.name : ''}
-      />
-      <Input
-        name='password'
-        values={values.password}
-        label='Password'
-        type='password'
-        placeholder='**************'
-        onChange={handleChange}
-        error={showError ? errors.password : ''}
-      />
-      <Button type='submit'>Login</Button>
+    <form autoComplete='off' onSubmit={onSubmit} className={`bg-white shadow-2xl shadow-blue-400 rounded-lg pb-8 mb-4 w-full max-w-sm mx-2`}>
+      <div className='relative h-48 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-bl-4xl rounded-lg'>
+        <svg class="absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,122.7C960,160,1056,224,1152,245.3C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div className='px-6 pb-5'>
+
+        <h2 className='text-3xl text-gray-800 font-bold mt-5 text-center'>
+          Faça login para continuar
+        </h2>
+        <h3 className='text-gray-400 text-xs text-center mb-10 pb-5 mt-2'>Ainda não é membro? <span className='underline text-gray-700 hover:text-blue-500 duration-300'><a href='#'>Registre-se</a></span></h3>
+        <Input
+          name='name'
+          values={values.name}
+          label='Login'
+          placeholder='Digite seu login'
+          onChange={handleChange}
+          error={showError ? errors.name : ''}
+        />
+        <Input
+          name='password'
+          values={values.password}
+          label='Password'
+          type='password'
+          placeholder='**************'
+          onChange={handleChange}
+          error={showError ? errors.password : ''}
+        />
+        <Button type='submit'>Login</Button>
+      </div>
     </form>
   )
 }
