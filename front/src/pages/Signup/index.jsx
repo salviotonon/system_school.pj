@@ -16,7 +16,7 @@ export const Signup = () => {
 
   return (
     <>
-      <header className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between sticky left-0 right-0 top-0 z-30'>
+      <header className='p-5 sm:p-2 bg-white shadow-xl md:flex md:items-center md:justify-between sticky left-0 right-0 top-0 z-30'>
         <div className='mx-4 my-6 md:my-0 flex justify-between items-center'>
           <span className='text-2xl cursor-pointer'>
             Logo

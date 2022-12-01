@@ -15,7 +15,7 @@ export const Login = () => {
 
   return (
     <>
-      <header className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between sticky left-0 right-0 top-0 z-30'>
+      <header className='p-5 sm:p-2 bg-white shadow-xl md:flex md:items-center md:justify-between sticky left-0 right-0 top-0 z-30'>
         <div className='mx-4 my-6 md:my-0 flex justify-between items-center'>
           <span className='text-2xl cursor-pointer'>
             Logo
@@ -26,7 +26,7 @@ export const Login = () => {
           </span>
         </div>
 
-        <ul className={`md:flex md:items-center z-[10] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${openMenu === false ? 'top-[-400px] opacity-0' : 'top-[80px] opacity-100'} transition-all ease-in duration-500`}>
+        <ul className={`md:flex md:items-center z-[8000] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${openMenu === false ? 'top-[-400px] opacity-0' : 'top-[80px] opacity-100'} transition-all ease-in duration-500`}>
           <li className='text-black mx-4 my-6 md:my-0'><a href='#' className='text-x1 hover:text-cyan-500 duration-500'>HOME</a></li>
           <li className='text-black mx-4 my-6 md:my-0'><a href='#' className='text-x1 hover:text-cyan-500 duration-500'>ABOUT</a></li>
           <li className='text-black mx-4 my-6 md:my-0'><a href='#' className='text-x1 hover:text-cyan-500 duration-500'>CONTACT</a></li>
