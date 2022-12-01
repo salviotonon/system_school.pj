@@ -36,7 +36,7 @@ export const Signup = () => {
         </ul>
 
       </header>
-      <main className='min-h-screen w-full mx-auto my-0 flex justify-center items-center'>
+      <main className='min-h-screen w-full mx-auto my-5 flex justify-center items-center '>
 
         <FormSignup />
 
