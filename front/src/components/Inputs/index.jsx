@@ -14,7 +14,7 @@ export const Input = ({ type, label, value, placeholder, name, error = '', onCha
         {label ? label : ''}
       </label>
       <div className='relative'>
-        {error ? <span className='text-red-600 visible text-sm font-light text-end duration-500 absolute right-0 bottom-[-30px]'>{error}</span> : <span className='text-blue-600 invisible opacity-0'>{error}</span>}
+        {error ? <span className='text-red-600 visible text-xs font-light text-end duration-500 absolute right-0 bottom-[-30px]'>{error}</span> : <span className='text-blue-600 invisible opacity-0'>{error}</span>}
       </div>
     </div>
   )
