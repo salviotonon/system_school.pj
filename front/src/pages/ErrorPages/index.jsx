@@ -4,7 +4,7 @@ export const ErrorPage = () => {
   return (
     <div className='min-h-screen flex flex-col justify-center items-center'>
       <h1 className='text-6xl text-slate-200'>Oops!</h1>
-      <p className='text-6x1 text-white'>Desculpe, um erro inesperado aconteceu!</p>
+      <p className='text-white sm:text-3xl text-sm'>Desculpe, um erro inesperado aconteceu!</p>
     </div>
   );
 }
