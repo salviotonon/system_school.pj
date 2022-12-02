@@ -1,6 +1,7 @@
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { registerSchema } from '../../schema/register'
+import { Link } from 'react-router-dom'
 
 import { Button } from '../Button'
 import { Input } from '../Inputs'
@@ -42,7 +43,7 @@ export const Form = () => {
         <h2 className='text-3xl text-gray-800 font-bold mt-5 text-center'>
           Faça login para continuar
         </h2>
-        <h3 className='text-gray-400 text-xs text-center mb-10 pb-5 mt-2'>Ainda não é membro? <span className='underline text-gray-700 hover:text-blue-500 duration-300'><a href='#'>Registre-se</a></span></h3>
+        <h3 className='text-gray-400 text-xs text-center mb-10 pb-5 mt-2'>Ainda não é membro? <span className='underline text-gray-700 hover:text-blue-500 duration-300'><Link to={'/signup'}>Registre-se</Link></span></h3>
         <Input
           name='name'
           values={values.name}
