@@ -8,33 +8,75 @@ import { HomeLogout } from './pages/HomeLogout'
 import { Login } from './pages/Login'
 import { Signup } from './pages/Signup'
 import { ErrorPage } from './pages/ErrorPages';
+import { Home } from './pages/Home'
+import { Layout } from './containers/Layout';
+import { SectionHome } from './containers/SectionHome/SectionHome'
+import { Perfil } from './containers/SectionHome/Perfil'
+import { Disciplinas } from './containers/SectionHome/Disciplinas';
+import { Mensagens } from './containers/SectionHome/Mensagens';
+import { Horarios } from './containers/SectionHome/Horarios';
+import { Fotos } from './containers/SectionHome/Fotos';
+
+
+
+
 
 
 
 export const MainRoutes = () => (
   <Routes>
-    <Route
-      path="/"
-      element={(<HomeLogout />)}
-    />
-    <Route
-      path="/login"
-      element={(<Login />)}
-    />
-    <Route
-      path="/signup"
-      element={(<Signup />)}
+    <Route path='/' element={<Layout />}>
 
-    />
-    <Route
-      path="/404"
-      element={(<ErrorPage />)}
+      <Route path='/' element={<HomeLogout />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
+      <Route path='/404' element={<ErrorPage />} />
+      <Route path='*' element={<Navigate to='/404' />} />
 
-    />
-    <Route
-      path="*"
-      element={(<Navigate to='/404' replace />)}
-    />
+
+      {/* childrens routes of home page */}
+
+      <Route path='/home' element={<Home />}>
+        <Route path='/home' element={<SectionHome />} />
+        <Route path='perfil' element={<Perfil />} />
+        <Route path='disciplinas' element={<Disciplinas />} />
+        <Route path='mensagens' element={<Mensagens />} />
+        <Route path='horarios' element={<Horarios />} />
+        <Route path='fotos' element={<Fotos />} />
+      </Route>
+
+    </Route>
   </Routes>
+
 );
+{/* <Routes>
+
+<Route
+  path="/"
+  element={(<HomeLogout />)}
+/>
+<Route
+  path="/login"
+  element={(<Login />)}
+/>
+<Route
+  path="/signup"
+  element={(<Signup />)}
+
+/>
+<Route
+  path="/404"
+  element={(<ErrorPage />)}
+
+/>
+<Route
+  path="/home"
+  element={(<Home />)}
+
+/>
+<Route
+  path="*"
+  element={(<Navigate to='/404' replace />)}
+/>
+</Routes> */}
 

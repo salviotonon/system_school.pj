@@ -1,6 +1,6 @@
 export const Class = () => {
   return (
-    <div class="max-w-xs cursor-pointer border-4 border-transparent hover:border-4 hover:border-cyan-500 transition-all duration-700  relative p-4 gap-2 mb-8 shadow-cyan-400 shadow-md rounded bg-white">
+    <div class="max-w-xs cursor-pointer border-2 border-transparent hover:border-2 hover:border-blue-500 transition-all duration-700  relative p-4 gap-2 mb-8 shadow-gray-400 shadow-md rounded bg-white">
       <div class="max-w-2xl mx-auto mb-4 text-gray-500  dark:text-gray-400">
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">3º Ano Matutino</h3>
         <p class="font-light text-sm">Andar 2 Bloco A Sala 341</p>
