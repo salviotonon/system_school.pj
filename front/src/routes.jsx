@@ -16,11 +16,7 @@ import { Disciplinas } from './containers/SectionHome/Disciplinas';
 import { Mensagens } from './containers/SectionHome/Mensagens';
 import { Horarios } from './containers/SectionHome/Horarios';
 import { Fotos } from './containers/SectionHome/Fotos';
-
-
-
-
-
+import { ClassRoom } from './containers/SectionHome/ClassRoom';
 
 
 export const MainRoutes = () => (
@@ -43,40 +39,10 @@ export const MainRoutes = () => (
         <Route path='mensagens' element={<Mensagens />} />
         <Route path='horarios' element={<Horarios />} />
         <Route path='fotos' element={<Fotos />} />
+        <Route path='classroom' element={<ClassRoom />} />
       </Route>
 
     </Route>
   </Routes>
 
 );
-{/* <Routes>
-
-<Route
-  path="/"
-  element={(<HomeLogout />)}
-/>
-<Route
-  path="/login"
-  element={(<Login />)}
-/>
-<Route
-  path="/signup"
-  element={(<Signup />)}
-
-/>
-<Route
-  path="/404"
-  element={(<ErrorPage />)}
-
-/>
-<Route
-  path="/home"
-  element={(<Home />)}
-
-/>
-<Route
-  path="*"
-  element={(<Navigate to='/404' replace />)}
-/>
-</Routes> */}
-

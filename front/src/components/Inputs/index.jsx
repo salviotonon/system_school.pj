@@ -9,6 +9,7 @@ export const Input = ({ type, label, value, placeholder, name, error = '', onCha
         name={name}
         onChange={onChange}
         value={value}
+
       />
       <label className='text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3.5 absolute left-0 -top-3.5 text-gray-700 transition-all' htmlFor={name}>
         {label ? label : ''}
