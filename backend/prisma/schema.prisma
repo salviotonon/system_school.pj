@@ -10,22 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Student {
-  id          String        @id @default(uuid())
-  name        String
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @default(now())
-
-  Gang Gang[]
-  @@map("student")
+model Administrator{
+  id    String    @id @default(uuid())
+  name  String 
+  passwordHash String 
+  email     String  
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now())  
+  @@map("administrator")
 }
-
-
-model Gang {
-  id     String @id @default(uuid())
-  gang   String
-  student Student @relation(fields: [id_student], references: [id])
-  id_student String
-  @@map("gang")
-}
-

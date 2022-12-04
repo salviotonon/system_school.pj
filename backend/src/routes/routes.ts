@@ -1,6 +1,9 @@
 import {Router} from 'express';
-import { studentRoute } from '../modules/student/routes/student.routes';
-export const router = Router();
 
+import administratorRouter from '../modules/administrator/routes/Administrator.routes';
 
-router.use('/student',studentRoute);
+const routes = Router();
+
+routes.use('/administrator', administratorRouter);
+
+export default routes;

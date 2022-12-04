@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "gang" ALTER COLUMN "number" SET DATA TYPE TEXT;

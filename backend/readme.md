@@ -23,3 +23,5 @@
     <li>deve devem esta associadas a o aluno</li>
     <li>devem ficar de forma fixa,pois pode precisar para o historico escolar</li>
 </ul>
+
+<h1>Ver para resolver as variaveis de ambiente do token</h1>
