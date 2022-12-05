@@ -5,6 +5,10 @@ export const registerSchema = yup.object().shape({
   // email: yup.string().email('E-mail inválido').required('E-mail é obrigatório'),
   password: yup
     .string()
-    .min(6, 'A senha deve ter no minimo 6 digitos')
+    .min(6, 'Senha com no mínimo 6 digitos')
     .required('Senha é obrigatório'),
+  repeatPassword: yup
+    .string()
+    .required('Confirme sua senha!')
+    .oneOf([yup.ref('password')], 'Senhas não coincidem'),
 })

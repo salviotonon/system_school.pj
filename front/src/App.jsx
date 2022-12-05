@@ -1,15 +1,16 @@
-import { Button } from './components/Button';
 import './global/styles.css';
-import { HomeLogout } from './pages/HomeLogout';
-import { Login } from './pages/Login';
+
+import { BrowserRouter } from 'react-router-dom'
+import { Layout } from './containers/Layout';
+import { MainRoutes } from './routes';
 
 
-function App() {
-
-
+export default function App() {
   return (
-    <Login />
+    <BrowserRouter>
+      <MainRoutes />
+    </BrowserRouter>
   )
 }
 
-export default App
+
