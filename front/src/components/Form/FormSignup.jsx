@@ -49,7 +49,7 @@ export const FormSignup = () => {
         <Input
           name='password'
           values={values.password}
-          label='Password'
+          label='Senha'
           type='password'
           placeholder='Password'
           onChange={handleChange}
@@ -58,7 +58,7 @@ export const FormSignup = () => {
         <Input
           name='repeatPassword'
           values={values.repeatPassword}
-          label='Repeat Password'
+          label='Repita a Senha'
           type='password'
           placeholder='Repeat Password'
           onChange={handleChange}
@@ -66,6 +66,6 @@ export const FormSignup = () => {
         />
         <Button type='submit'>Enviar</Button>
       </div>
-    </form >
+    </form>
   )
 }

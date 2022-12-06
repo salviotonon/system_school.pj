@@ -2,16 +2,13 @@ import { SearchInput } from '../../components/Inputs/SearchInput'
 import { ListStudent } from '../../components/ListStudent'
 import { students } from '../../components/Class/arrayClass'
 import { useState } from 'react'
-import { useEffect } from 'react'
-
-
 
 
 export const ClassRoom = () => {
   const [listStudent, setListStudent] = useState('')
 
   const filterStudent = students.filter((studentName) => (
-    studentName.name.toLowerCase().includes(listStudent)
+    studentName.name.toLowerCase().normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '').includes(listStudent)
   ))
 
   return (

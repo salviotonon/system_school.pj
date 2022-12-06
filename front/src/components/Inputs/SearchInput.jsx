@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
-import { useState } from 'react'
-import { students } from '../Class/arrayClass';
 
-export const SearchInput = ({ placeholder, setListStudent, listStudent, }) => {
+export const SearchInput = ({ placeholder, setListStudent }) => {
 
   const handleSearchChange = (e) => {
-    setListStudent(e.target.value)
+    let textInput = e.target.value
+    setListStudent(textInput.toLowerCase().normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, ''))
   }
 
 

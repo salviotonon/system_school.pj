@@ -53,7 +53,7 @@ export const Aside = () => {
         <div className='h-[1px] border-b border-slate-300 mt-10 mb-4 w-4/5 mx-auto'></div>
         <NavLink to={'/'} className={`${({ isActive }) => isActive ? activeLink : normalLink} hover:opacity-90 duration-300 flex items-center justify-center gap-1 mx-8 px-4 py-2 bg-blue-500 text-slate-100 rounded-lg mt-5`} >
           <FiLogOut />
-          Logout
+          Desconectar
         </NavLink>
       </ul>
 
