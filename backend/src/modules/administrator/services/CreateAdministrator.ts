@@ -28,12 +28,12 @@ export class CreateAdministratorService {
 
     const hash = new AdministratorHash();
 
-    const passwordHash = await hash.generate({password});
+    const passwordHash = await hash.generate({ password });
 
     const newAdministrator = await createAdministrator.create({ name, email, passwordHash, });
-    
+
     const create = await token.generate(newAdministrator.id, newAdministrator.email);
-    
+
     const administrator = {
       name: newAdministrator.name,
       token: create,

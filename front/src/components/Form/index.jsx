@@ -9,16 +9,22 @@ import { Input } from '../Inputs'
 export const Form = () => {
   const [showError, setShowError] = useState(false);
 
-  const { values, errors, handleChange, handleSubmit } = useFormik({
+  const { values, errors, handleChange, handleSubmit, isSubmitting } = useFormik({
     initialValues: {
       name: '',
       password: '',
     },
     validationSchema: loginSchema,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: (values, { setSubmitting }) => {
+      setTimeout(() => {
+        alert(JSON.stringify(values, null, 2));
+        setSubmitting(false)
+      }, 400)
     }
   });
+
+
+
   const onSubmit = (e) => {
     setShowError(true);
     handleSubmit(e)
@@ -54,7 +60,7 @@ export const Form = () => {
           onChange={handleChange}
           error={showError ? errors.password : ''}
         />
-        <Button type='submit'>Entrar</Button>
+        {isSubmitting ? (<Button type='submit'>...</Button>) : <Button type='submit'>Entrar</Button>}
       </div>
     </form>
   )

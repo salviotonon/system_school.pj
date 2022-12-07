@@ -7,7 +7,7 @@ export const registerSchema = yup.object().shape({
     .string()
     .min(6, 'Senha com no mínimo 6 digitos')
     .required('Senha é obrigatório'),
-  repeatPassword: yup
+  confirmPassword: yup
     .string()
     .required('Confirme sua senha!')
     .oneOf([yup.ref('password')], 'Senhas não coincidem'),

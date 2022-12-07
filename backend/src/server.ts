@@ -17,7 +17,7 @@ app.use(
         status: 'error',
         message: error.message,
       });
-    
+
     }
     return response.status(500).json({
       status: 'error',
@@ -26,6 +26,6 @@ app.use(
   }
 );
 
-app.listen(process.env.PORT,() => {
+app.listen(process.env.PORT, () => {
   console.log('🚀 server is running ');
 });

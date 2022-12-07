@@ -1,4 +1,5 @@
-export const Input = ({ type, label, value, placeholder, name, error = '', onChange }) => {
+export const Input = ({ type, label, onBlur, value, placeholder, name, error = '', onChange }) => {
+
   return (
     <div className='flex flex-col py-4 relative my-4 '>
 
@@ -9,6 +10,7 @@ export const Input = ({ type, label, value, placeholder, name, error = '', onCha
         name={name}
         onChange={onChange}
         value={value}
+        onBlur={onBlur}
 
       />
       <label className='text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3.5 absolute left-0 -top-3.5 text-gray-700 transition-all' htmlFor={name}>
