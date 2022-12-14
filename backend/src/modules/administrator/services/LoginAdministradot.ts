@@ -36,12 +36,12 @@ export class LoginAdministratorService {
     if(compare === false) {
       throw new AppError('Email ou senha está errado ');
     }
-   
 
     const administratorToken = await token.generate( login.id, email);
 
 
     const administrator = {
+      id: login.id,
       name: login.name,
       token: administratorToken
     };

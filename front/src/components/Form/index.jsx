@@ -1,25 +1,26 @@
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { loginSchema } from '../../schema/register'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { Button } from '../Button'
 import { Input } from '../Inputs'
+import { login, reset } from '../../slices/authSlice';
 
 export const Form = () => {
   const [showError, setShowError] = useState(false);
-
-  const { values, errors, handleChange, handleSubmit, isSubmitting } = useFormik({
+  const dispatch = useDispatch();
+  const { loading, error } = useSelector((state) => state.auth)
+  const { values, errors, handleChange, handleSubmit } = useFormik({
     initialValues: {
-      name: '',
+      email: '',
+      // email: '',
       password: '',
     },
-    validationSchema: loginSchema,
-    onSubmit: (values, { setSubmitting }) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false)
-      }, 400)
+    validationSchema: registerSchema,
+    onSubmit: (values) => {
+      // console.log(values);
     }
   });
 
@@ -28,7 +29,19 @@ export const Form = () => {
   const onSubmit = (e) => {
     setShowError(true);
     handleSubmit(e)
+    e.preventDefault()
+    const user = {
+      email: values.email,
+      password: values.password,
+    }
+    dispatch(login(user))
+    cleanForm;
   }
+
+  const cleanForm = () => {
+    values.email = ''
+    values.password = ''
+  };
 
   return (
     <form autoComplete='off' onSubmit={onSubmit} className={`bg-white shadow-2xl shadow-blue-400 rounded-lg pb-8 mb-4 w-full max-w-sm mx-2`}>
