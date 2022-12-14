@@ -38,7 +38,7 @@ export class CreateAdministratorService {
       name: newAdministrator.name,
       token: create,
     };
-    
+
     return administrator;
 
   }

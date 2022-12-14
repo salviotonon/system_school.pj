@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { loginSchema } from '../../schema/register'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { registerSchema } from '../../schema/register'
 
 import { Button } from '../Button'
 import { Input } from '../Inputs'
@@ -12,7 +13,7 @@ export const Form = () => {
   const [showError, setShowError] = useState(false);
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth)
-  const { values, errors, handleChange, handleSubmit } = useFormik({
+  const { values, errors, handleChange, handleSubmit, isSubmitting } = useFormik({
     initialValues: {
       email: '',
       // email: '',

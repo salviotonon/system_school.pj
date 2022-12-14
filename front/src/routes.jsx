@@ -4,6 +4,8 @@ import {
   Navigate,
 } from 'react-router-dom';
 
+import { useAuth } from './hooks/useAuth';
+
 import { HomeLogout } from './pages/HomeLogout'
 import { Login } from './pages/Login'
 import { Signup } from './pages/Signup'
@@ -19,30 +21,34 @@ import { Fotos } from './containers/SectionHome/Fotos';
 import { ClassRoom } from './containers/SectionHome/ClassRoom';
 
 
-export const MainRoutes = () => (
-  <Routes>
-    <Route path='/' element={<Layout />}>
+export const MainRoutes = () => {
+  const { auth, loading } = useAuth();
 
-      <Route path='/' element={<HomeLogout />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-      <Route path='/404' element={<ErrorPage />} />
-      <Route path='*' element={<Navigate to='/404' />} />
+  return (
+    <Routes>
+      <Route path='/' element={<Layout />}>
+
+        <Route path='/' element={<HomeLogout />} />
+        <Route path='/login' element={!auth ? <Login /> : <Navigate to='/' />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/404' element={<ErrorPage />} />
+        <Route path='*' element={<Navigate to='/404' />} />
 
 
-      {/* childrens routes of home page */}
+        {/* childrens routes of home page */}
 
-      <Route path='/home' element={<Home />}>
-        <Route path='/home' element={<SectionHome />} />
-        <Route path='perfil' element={<Perfil />} />
-        <Route path='disciplinas' element={<Disciplinas />} />
-        <Route path='mensagens' element={<Mensagens />} />
-        <Route path='horarios' element={<Horarios />} />
-        <Route path='fotos' element={<Fotos />} />
-        <Route path='classroom' element={<ClassRoom />} />
+        <Route path='/home' element={auth ? <Home /> : <Navigate to='/login' />}>
+          <Route path='/home' element={<SectionHome />} />
+          <Route path='perfil' element={<Perfil />} />
+          <Route path='disciplinas' element={<Disciplinas />} />
+          <Route path='mensagens' element={<Mensagens />} />
+          <Route path='horarios' element={<Horarios />} />
+          <Route path='fotos' element={<Fotos />} />
+          <Route path='classroom' element={<ClassRoom />} />
+        </Route>
+
       </Route>
+    </Routes>
 
-    </Route>
-  </Routes>
-
-);
+  )
+};
