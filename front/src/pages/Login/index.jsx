@@ -1,21 +1,22 @@
-import { Button } from '../../components/Button'
 import { Form } from '../../components/Form'
 import { FcMenu } from 'react-icons/fc'
 import { GrFormClose } from 'react-icons/gr'
 import { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+import { Header } from '../../containers/Header'
+import { Footer } from '../../containers/Footer'
+
 
 
 
 export const Login = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  const handleOpenMenu = () => {
-    setOpenMenu(!openMenu)
-  }
-
   return (
     <>
+<<<<<<< HEAD
+      <main className='min-h-screen w-full mx-auto my-5 flex justify-center items-center '>
+        <Form />
+=======
       <header className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between'>
         <div className='mx-4 my-6 md:my-0 flex justify-between items-center'>
           <span className='text-2xl cursor-pointer'>
@@ -37,14 +38,10 @@ export const Login = () => {
 
       </header>
       <main className='min-h-screen w-full mx-auto my-0 flex justify-center items-center'>
-        <Form />
+        <Form  />
 
+>>>>>>> f4b985122f87d99ef7f5fdb3023461d42088c8cc
       </main>
-      <footer className='bg-white shadow-xl h-24 flex items-center justify-center'>
-        <span className='text-sm font-light'> Projeto Comunidade Pj &copy;</span>
-
-      </footer>
     </>
-
   )
 }
