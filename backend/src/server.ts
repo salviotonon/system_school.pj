@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import 'express-async-errors';
 import express, { NextFunction, Request, Response } from 'express';
+<<<<<<< HEAD
 import cors from 'cors';
 import { AppError } from './errors/AppError';
 import routes from './routes/routes';
@@ -10,6 +11,15 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(routes);
+=======
+import { router } from './routes/routes';
+import { AppError } from './errors/AppError';
+
+const app = express();
+app.use(express.json());
+
+app.use(router);
+>>>>>>> parent of f761e68 (create_administrador)
 
 app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
@@ -60,5 +70,5 @@ app.use(
 //   res.status(201).json(result);
 // });
 app.listen(process.env.PORT,() => {
-  console.log('🚀 server is running ');
+  console.log('🚀 server is running');
 });

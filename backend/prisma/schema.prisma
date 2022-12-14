@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+<<<<<<< HEAD
 model Administrator {
   id           String   @id @default(uuid())
   name         String
@@ -40,3 +41,24 @@ model Gang {
 
   @@map("gang")
 }
+=======
+model Student {
+  id          String        @id @default(uuid())
+  name        String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @default(now())
+
+  Gang Gang[]
+  @@map("student")
+}
+
+
+model Gang {
+  id     String @id @default(uuid())
+  gang   String
+  student Student @relation(fields: [id_student], references: [id])
+  id_student String
+  @@map("gang")
+}
+
+>>>>>>> parent of f761e68 (create_administrador)

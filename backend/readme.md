@@ -23,6 +23,7 @@
     <li>deve devem esta associadas a o aluno</li>
     <li>devem ficar de forma fixa,pois pode precisar para o historico escolar</li>
 </ul>
+<<<<<<< HEAD
 
 <h1>Obs em aberto</h1>
 <ul>
@@ -30,3 +31,5 @@
     <li>Separa as entidades student e gang</li>
     <li></li>
 </ul>
+=======
+>>>>>>> parent of f761e68 (create_administrador)
