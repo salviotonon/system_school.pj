@@ -24,4 +24,9 @@
     <li>devem ficar de forma fixa,pois pode precisar para o historico escolar</li>
 </ul>
 
-<h1>Ver para resolver as variaveis de ambiente do token</h1>
+<h1>Obs em aberto</h1>
+<ul>
+    <li>Resolver as variaveis de ambiente</li>
+    <li>Separa as entidades student e gang</li>
+    <li></li>
+</ul>

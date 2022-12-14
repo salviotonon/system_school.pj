@@ -5,7 +5,7 @@ import { LoginAdministratorService } from '../services/LoginAdministradot';
 export class AdministratorController {
   public async register(request: Request, response: Response) {
     const { name, email, password, confirmPassword } = request.body;
-
+    
     const createAdministrator = new CreateAdministratorService();
 
     const administrator = await createAdministrator.execute({
@@ -14,18 +14,18 @@ export class AdministratorController {
       password,
       confirmPassword,
     });
-
+    
     response.status(201).json({administrator});
   }
 
   public async login(request: Request, response: Response) {
-    const { email,password } = request.body;
+    const { email, password } = request.body;
 
     const loginAdministrator = new LoginAdministratorService();
 
     const login = await loginAdministrator.execute({ 
       email,
-      password 
+      password, 
     });
 
     response.status(201).json({login});

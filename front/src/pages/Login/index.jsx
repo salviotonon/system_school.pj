@@ -37,7 +37,7 @@ export const Login = () => {
 
       </header>
       <main className='min-h-screen w-full mx-auto my-0 flex justify-center items-center'>
-        <Form />
+        <Form  />
 
       </main>
       <footer className='bg-white shadow-xl h-24 flex items-center justify-center'>
