@@ -10,12 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Administrator{
-  id    String    @id @default(uuid())
-  name  String 
-  passwordHash String 
-  email     String  
-  created_at DateTime  @default(now())
-  updated_at DateTime  @default(now())  
+model Administrator {
+  id           String   @id @default(uuid())
+  name         String
+  passwordHash String
+  email        String
+  created_at   DateTime @default(now())
+  updated_at   DateTime @default(now())
+
   @@map("administrator")
 }
